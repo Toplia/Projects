@@ -1,0 +1,10 @@
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.csprojResolveAssemblyReference.cache
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.common.control.loadingPanel.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.Dialog.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.loginPanel.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.MainWin.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.login.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.Properties.Resources.resources
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.csproj.GenerateResource.Cache
+g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe.config
+G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe.config

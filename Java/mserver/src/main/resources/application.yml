@@ -1,0 +1,16 @@
+spring:
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 9090
+#JAX-RS 自动配置
+cxf:
+  jaxrs:
+    component-scan: true
+    classes-scan-packages: org.apache.cxf.jaxrs.swagger
