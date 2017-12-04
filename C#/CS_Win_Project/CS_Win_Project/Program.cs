@@ -16,7 +16,8 @@ namespace CS_Win_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            new Login().Show();
+            Application.Run();
         }
     }
 }

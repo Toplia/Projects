@@ -62,12 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="common\control\loadingPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="common\control\loadingPanel.Designer.cs">
-      <DependentUpon>loadingPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="common\win\Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +69,6 @@
       <DependentUpon>Dialog.cs</DependentUpon>
     </Compile>
     <Compile Include="entity\user\LocalUser.cs" />
-    <Compile Include="common\control\loginPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="common\control\loginPanel.Designer.cs">
-      <DependentUpon>loginPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,14 +83,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="common\control\loadingPanel.resx">
-      <DependentUpon>loadingPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="common\win\Dialog.resx">
       <DependentUpon>Dialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="common\control\loginPanel.resx">
-      <DependentUpon>loginPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
@@ -150,6 +132,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="common\control\" />
     <Folder Include="common\utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,7 +13,7 @@ namespace CS_Win_Project
     public partial class MainWin : Form
     {
         private string userName;
-        private login login;
+        private Login login;
 
         public MainWin()
         {
@@ -26,25 +26,13 @@ namespace CS_Win_Project
             InitializeComponent();
             this.Text = userName;
         }
-
-        public MainWin(string userName, login login)
-        {
-            // TODO: Complete member initialization
-            InitializeComponent();
-            this.userName = userName;
-            this.Text = userName;
-            this.login = login;
-        }
-
         private void FormMainWin_Load(object sender, EventArgs e)
         {
-            this.login.Visible = false;
+           
         }
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            this.login.Controls.Remove(this.login.loading);
-            this.login.Controls.Add(this.login.loginPanel);
-            this.login.Visible = true;
+           
         }
     }
 }

@@ -19,17 +19,16 @@ namespace CS_Win_Project
             InitializeComponent();
         }
 
-        public Dialog(string info_title)
+        public Dialog(string info)
         {
-            // TODO: Complete member initialization
             InitializeComponent();
-            this.Text = info_title;
+            this.Text = "";
+            this.contentText.Text = info;
            
         }
 
         public Dialog(string info_title, string info_text)
         {
-            // TODO: Complete member initialization
             InitializeComponent();
             this.info_title = info_title;
             this.contentText.Text = info_text;
