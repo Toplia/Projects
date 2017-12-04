@@ -18,12 +18,9 @@ namespace CS_Win_Project
             InitializeComponent();
         }
 
-        private void name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private string _name;
         private string _password;
+        private Thread _progress;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             _name = name.Text;
@@ -46,30 +43,79 @@ namespace CS_Win_Project
 
             panel.BringToFront();
             panel.Visible = true;
+            //progressBar.MarqueeAnimationSpeed = 50 * 10;
+            progressBar.Step = 1;
 
-            Thread _progress = new Thread(new ThreadStart(process));
+            _progress = new Thread(new ThreadStart(process));
+            _progress.IsBackground = true;
             _progress.Start();
+        }
+        delegate void processCallback(int i);
+        private void progressIng(int i)
+        {
+            
+            if (progressBar.InvokeRequired)
+            {
+                processCallback pd = new processCallback(progressIng);
+                this.Invoke(pd, new Object[] { i });
+            }
+            else
+            {
+                if (i == progressBar.Maximum)
+                {
+                    this.Dispose();
+                    new MainWin(_name).Show();
+                }
+                else
+                {
+                    
+                    progressBar.Value = i;
+                    if (i < 10)
+                    {
+                        this.loading.Text = "正在连接...";
+                        Thread.Sleep(100);
+                    }
+                    else if (i < 90)
+                    {
+                        this.loading.Text = "验证登录...";
+                        Thread.Sleep(10);
+                    }
+                    else
+                    {
+                        this.loading.Text = "验证权限...";
+                        Thread.Sleep(100);
+                    }
+                }
+               
+            }
+            
         }
         private void process()
         {
             for (int i = 1; i < 101; i++)
             {
-                progressBar.Value = i;
-                if (i == progressBar.Maximum)
-                {
-                    this.Dispose();
-                    new MainWin(_name).Show();
-                    
-                }
-                Thread.Sleep(100);
+                progressIng(i);
             }
         } 
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            _progress.Suspend();
             panel.Visible = false;
             panel.SendToBack();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            panel.Visible = false;
+            progressBar.Value = 1;
+            panel.SendToBack();
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            this.Dispose();
+            Application.Exit();
+        }
     }
 }

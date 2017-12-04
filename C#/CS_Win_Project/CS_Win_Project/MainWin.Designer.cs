@@ -45,6 +45,7 @@
             this.ClientSize = new System.Drawing.Size(799, 439);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainWin";
             this.Load += new System.EventHandler(this.FormMainWin_Load);
             this.ResumeLayout(false);

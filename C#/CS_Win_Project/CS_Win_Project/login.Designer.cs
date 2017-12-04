@@ -37,8 +37,9 @@
             this.autoSave = new System.Windows.Forms.CheckBox();
             this.autoLogin = new System.Windows.Forms.CheckBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.cancel = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.loading = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,6 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(149, 21);
             this.name.TabIndex = 3;
-            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // password
             // 
@@ -110,6 +110,7 @@
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.loading);
             this.panel.Controls.Add(this.cancel);
             this.panel.Controls.Add(this.progressBar);
             this.panel.Location = new System.Drawing.Point(0, 0);
@@ -118,23 +119,31 @@
             this.panel.TabIndex = 7;
             this.panel.Visible = false;
             // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(75, 78);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(180, 22);
-            this.progressBar.TabIndex = 0;
-            // 
             // cancel
             // 
             this.cancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cancel.Location = new System.Drawing.Point(128, 131);
+            this.cancel.Location = new System.Drawing.Point(115, 142);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 1;
             this.cancel.Text = "取消";
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(75, 86);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(180, 14);
+            this.progressBar.TabIndex = 0;
+            // 
+            // loading
+            // 
+            this.loading.AutoSize = true;
+            this.loading.Location = new System.Drawing.Point(128, 103);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(0, 12);
+            this.loading.TabIndex = 2;
             // 
             // Login
             // 
@@ -154,9 +163,11 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +185,6 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label loading;
     }
 }

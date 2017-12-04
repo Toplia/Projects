@@ -8,12 +8,12 @@ g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Pr
 g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.csproj.GenerateResource.Cache
 g:\visual studio 2013\Projects\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe.config
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe.config
+G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe
+G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.pdb
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.Dialog.resources
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.MainWin.resources
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.Login.resources
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.Properties.Resources.resources
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.csproj.GenerateResource.Cache
-G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.exe
-G:\Projects\C#\CS_Win_Project\CS_Win_Project\bin\Debug\CS_Win_Project.pdb
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.exe
 G:\Projects\C#\CS_Win_Project\CS_Win_Project\obj\Debug\CS_Win_Project.pdb

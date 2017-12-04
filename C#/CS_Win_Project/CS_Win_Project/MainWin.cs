@@ -30,9 +30,22 @@ namespace CS_Win_Project
         {
            
         }
-        protected override void OnFormClosed(FormClosedEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
            
+        }
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            Dialog dialog = new Dialog("是否退出到登录界面?");
+            DialogResult result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.Dispose();
+                new Login().Show();
+                return;
+            }
+            this.Dispose();
+            Application.Exit();
         }
     }
 }
