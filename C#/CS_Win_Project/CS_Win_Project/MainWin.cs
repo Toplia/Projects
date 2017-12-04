@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace CS_Win_Project
 {
@@ -28,7 +30,7 @@ namespace CS_Win_Project
         }
         private void FormMainWin_Load(object sender, EventArgs e)
         {
-           
+            
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

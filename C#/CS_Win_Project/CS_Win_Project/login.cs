@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
+using CS_Win_Project.entity.user;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CS_Win_Project
 {
@@ -17,7 +20,6 @@ namespace CS_Win_Project
         {
             InitializeComponent();
         }
-
         private string _name;
         private string _password;
         private Thread _progress;
@@ -63,6 +65,20 @@ namespace CS_Win_Project
             {
                 if (i == progressBar.Maximum)
                 {
+                    if (autoSave.Checked)
+                    {
+                        FileStream fs = new FileStream("db", FileMode.OpenOrCreate);
+                        BinaryFormatter bf = new BinaryFormatter();
+                        LocalUser user = new LocalUser();
+                        user.name = _name;
+                        user.password = _password;
+                        user.isAuto = autoLogin.Checked;
+                        user.isSave = autoSave.Checked;
+                        bf.Serialize(fs, user);
+                        fs.Flush();
+                        fs.Close();
+                    }
+                    
                     this.Dispose();
                     new MainWin(_name).Show();
                 }
@@ -110,6 +126,18 @@ namespace CS_Win_Project
             panel.Visible = false;
             progressBar.Value = 1;
             panel.SendToBack();
+            FileStream fs = new FileStream("db", FileMode.OpenOrCreate);
+            if (fs.Length > 0)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                LocalUser user = bf.Deserialize(fs) as LocalUser;
+                name.Text = user.name;
+                password.Text = user.password;
+                autoLogin.Checked = user.isAuto;
+                autoSave.Checked = user.isSave;
+            }
+            fs.Flush();
+            fs.Close();
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)

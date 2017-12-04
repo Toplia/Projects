@@ -69,6 +69,7 @@
       <DependentUpon>Dialog.cs</DependentUpon>
     </Compile>
     <Compile Include="entity\user\LocalUser.cs" />
+    <Compile Include="entity\user\Password.cs" />
     <Compile Include="MainWin.cs">
       <SubType>Form</SubType>
     </Compile>
