@@ -38,6 +38,7 @@
 		</dependency>
 
 		<!-- axis -->
+		<!-- <=1.4 https://svn.apache.org/repos/asf/axis/axis1/java/trunk@1848993 -->
 		<dependency>
 			<groupId>org.apache.axis</groupId>
 			<artifactId>axis</artifactId>
